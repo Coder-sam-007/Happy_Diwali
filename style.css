@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Dancing+Script&family=Work+Sans:wght@100;400&display=swap");
+
+:root {
+  --var-main-bg: linear-gradient(
+    45deg,
+    rgb(255 70 70 / 34%),
+    rgb(255 255 255 / 36%)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Abyssinica SIL", serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTSEnRNpmKQpMm_GFeh3vGMwGCSslRwVnAPv4513qyG70hCM9Ljww3jfDbodcmErUj-Y7u0bvxe4ge7Dyojl96PnAZNKJtrERFnDiAA3qL_zOYxr5BW7wQ-OkedZPnOxrsFuKbLtKvCy9pNb2_OyHs5wiScdfe2SRBzU45xJuTtR49M5nlVefkpj5-uw/s16000/bg-main.webp);
+}
+
+body::before {
+  content: "";
+  background: linear-gradient(45deg, rgb(255 0 0 / 23%), rgb(82 46 82 / 7%));
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+}
+
+.lichu-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.9rem;
+}
+
+.lichu_lights img {
+  width: 100%;
+  height: auto;
+}
+
+.lichu-light-1 {
+  width: 2.2rem;
+  left: 4vw;
+  top: -2rem;
+  animation: lichushort 1s ease 1 forwards;
+}
+
+.lichu-light-2 {
+  left: 16vw;
+  animation: lichulong 1s ease 1 forwards;
+}
+
+.lichu-light-3 {
+  left: 74vw;
+  animation: lichulong 1s ease 1 forwards;
+}
+
+.lichu-light-4 {
+  width: 2.2rem;
+  left: 87vw;
+  top: -2rem;
+  animation: lichushort 1s ease 1 forwards;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  opacity: 0;
+  background: url(https://1.bp.blogspot.com/-fK0YDt8PcXg/XZcTqvhbt3I/AAAAAAAAMFU/x3FOMgitGosTranfvxEvv1JZ31sqsmUUQCLcBGAsYHQ/s1600/Bg.gif)
+    no-repeat center top;
+  mix-blend-mode: plus-lighter;
+  animation: crackers 1s ease 2.3s forwards;
+}
+
+.hero h1 {
+  margin: 2rem 0 1rem 0;
+  z-index: 10;
+  font-size: 3.5rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 1px 1px 5px black;
+}
+
+.hero p {
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.central-image img {
+  height: 20rem;
+  width: 20rem;
+  opacity: 0;
+  margin-top: 3rem;
+  animation: zubuk 1s ease 1s 1 forwards;
+}
+
+.wish {
+  background: var(--var-main-bg);
+  border: 2px solid rgb(249, 211, 181);
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 0 1rem;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.wish::before {
+  content: "";
+  position: absolute;
+  top: var(--before_top, -196px);
+  left: var(--before_left, -215px);
+  width: 184%;
+  height: 560%;
+  background: url(/img/wish-top-left.png);
+  background-repeat: no-repeat;
+  scale: 0.2;
+  z-index: 10000;
+}
+.wish::after {
+  content: "";
+  position: absolute;
+  top: var(--after_top, -188px);
+  right: var(--after_right, -273px);
+  width: 184%;
+  height: 560%;
+  background: url(/img/wish-top-right.png);
+  background-repeat: no-repeat;
+  scale: 0.2;
+}
+
+.wish span {
+  font-size: 1.5rem;
+}
+
+.wish p:nth-child(2) {
+  text-decoration: underline;
+}
+
+.form-box {
+  margin: 1rem;
+  max-width: 100%;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area input {
+  border: 2px solid white;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  margin: 1rem;
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.input-area button {
+  border: 2px solid white;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.music {
+  display: grid;
+  place-items: center;
+}
+
+.share-btn {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.share-btn span {
+  background: var(--var-main-bg);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.3rem 2rem;
+  text-transform: uppercase;
+}
+
+.share-btn i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+/* Key Frames */
+
+@keyframes lichushort {
+  0% {
+    top: -50vw;
+  }
+
+  90% {
+    top: 0vw;
+  }
+
+  100% {
+    top: -2vw;
+  }
+}
+
+@keyframes lichulong {
+  0% {
+    top: -50vw;
+  }
+
+  90% {
+    top: 0vw;
+  }
+
+  100% {
+    top: -2vw;
+  }
+}
+
+@keyframes zubuk {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes crackers {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+  }
+}
+
+/* Media Query Starts */
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .input-area input {
+    margin: 1rem 0;
+    max-width: 90%;
+  }
+
+  .wish::after,
+  .wish::before {
+    display: none;
+  }
+}
