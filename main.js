@@ -37,12 +37,6 @@ const adjustingPosition = () => {
   wish.style.setProperty("--after_right", "-469px");
 };
 
-window.onload = function () {
-  setTimeout(function () {
-    audio.play();
-  }, 3000);
-};
-
 const checkName = () => {
   if (name.length !== 0) {
     name = name.replace(/-/g, " ");
@@ -71,6 +65,7 @@ const createGreeting = () => {
     formBox.style.display = "none";
     yourName.textContent = sname;
     adjustingPosition();
+    audio.play();
     msg.textContent = " is wishing you the best of your fortune this Diwali :)";
     window.scrollTo(0, 0);
   } else {
