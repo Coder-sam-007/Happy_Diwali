@@ -156,7 +156,7 @@ body::before {
 }
 
 .wish p:nth-child(2) {
-  text-decoration: underline;
+  font-style: italic;
 }
 
 .form-box {

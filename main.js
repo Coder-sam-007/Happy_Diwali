@@ -13,6 +13,17 @@ function gtag() {
   dataLayer.push(arguments);
 }
 
+sname.addEventListener("click", () => {
+  audio.play();
+});
+
+window.addEventListener("keydown", (e) => {
+  console.log("the button that was pressed is: ", e.key);
+  if (e.key == "Enter") {
+    goBTN.click();
+  }
+});
+
 const createSubURL = (sParam) => {
   let sPageURL = window.location.search.substring(1);
   let sURLletiables = sPageURL.split("&");
@@ -25,9 +36,9 @@ const createSubURL = (sParam) => {
 };
 
 window.jqs = createSubURL;
-let name = decodeURI(createSubURL("bl"));
+let Name = decodeURI(createSubURL("bl"));
 if (typeof createSubURL("bl") === "undefined") {
-  name = "";
+  Name = "";
 }
 
 const adjustingPosition = () => {
@@ -38,9 +49,9 @@ const adjustingPosition = () => {
 };
 
 const checkName = () => {
-  if (name.length !== 0) {
-    name = name.replace(/-/g, " ");
-    yourName.textContent = name;
+  if (Name.length !== 0) {
+    Name = Name.replace(/-/g, " ");
+    yourName.textContent = Name;
     msg.textContent =
       sname.value + " is wishing you the best of your fortune this Diwali :)";
     adjustingPosition();
@@ -65,7 +76,6 @@ const createGreeting = () => {
     formBox.style.display = "none";
     yourName.textContent = sname;
     adjustingPosition();
-    audio.play();
     msg.textContent = " is wishing you the best of your fortune this Diwali :)";
     window.scrollTo(0, 0);
   } else {
@@ -82,7 +92,7 @@ const shareActionWA = () => {
   shareString += "*" + sname.trim() + "*";
 
   shareString +=
-    " has sent you a pleasant surprise, to know what's inside just click the link below \n👉";
+    " has sent you a pleasant surprise, to know what's inside just hit the link \n👉";
   shareString += (window.location.href.split("?")[0] + "?bl=" + sname)
     .replace("#", "")
     .replace(/ /g, "-");
