@@ -7,6 +7,7 @@ const goBTN = document.querySelector("#go-btn");
 let sname = document.querySelector("#nameinput");
 const wish = document.querySelector(".wish");
 const audio = document.getElementById("my_audio");
+const nameBox = document.querySelector(".name-box");
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
@@ -18,7 +19,6 @@ sname.addEventListener("click", () => {
 });
 
 window.addEventListener("keydown", (e) => {
-  console.log("the button that was pressed is: ", e.key);
   if (e.key == "Enter") {
     goBTN.click();
   }
@@ -40,13 +40,6 @@ let Name = decodeURI(createSubURL("bl"));
 if (typeof createSubURL("bl") === "undefined") {
   Name = "";
 }
-
-const adjustingPosition = () => {
-  wish.style.setProperty("--before_top", "-14.88rem");
-  wish.style.setProperty("--before_left", "-9.8rem");
-  wish.style.setProperty("--after_top", "-17.1rem");
-  wish.style.setProperty("--after_right", "-22.2rem");
-};
 
 const checkName = () => {
   if (Name.length !== 0) {
@@ -75,8 +68,8 @@ const createGreeting = () => {
     shareBTN.classList.remove("hide");
     formBox.style.display = "none";
     yourName.textContent = sname;
-    adjustingPosition();
     msg.textContent = " is wishing you the best of your fortune this Diwali :)";
+    nameBox.style.display = "block";
     window.scrollTo(0, 0);
   } else {
     alert("Please Type Your Name First");

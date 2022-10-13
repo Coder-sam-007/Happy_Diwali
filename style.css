@@ -117,37 +117,18 @@ body::before {
   animation: zubuk 1s ease 1s 1 forwards;
 }
 
-.wish {
+.wish,
+.name-box {
   background: var(--var-main-bg);
   border: 2px solid rgb(249, 211, 181);
   border-radius: 0.5rem;
   position: relative;
-  margin: 0 1rem;
+  margin: 1rem;
   padding-top: 0.5rem;
 }
 
-.wish::before {
-  content: "";
-  position: absolute;
-  top: var(--before_top, -11.8rem);
-  left: var(--before_left, -6.6rem);
-  width: 84%;
-  height: 147%;
-  background: url(/img/wish-top-left.png);
-  background-repeat: no-repeat;
-  scale: 0.2;
-  z-index: 10000;
-}
-.wish::after {
-  content: "";
-  position: absolute;
-  top: var(--after_top, -13.3rem);
-  right: var(--after_right, -14.2rem);
-  width: 142%;
-  height: 184%;
-  background: url(/img/wish-top-right.png);
-  background-repeat: no-repeat;
-  scale: 0.2;
+.name-box {
+  display: none;
 }
 
 .wish span {
@@ -178,7 +159,7 @@ p span {
 }
 
 .fa-quote-left {
-  margin: 0 1rem 1rem;
+  margin: 0 2rem 1rem;
   font-size: 2rem;
 }
 
@@ -335,8 +316,8 @@ input::placeholder {
     max-width: 90%;
   }
 
-  .wish::after,
-  .wish::before {
-    display: none;
+  .wish,
+  .name-box {
+    min-width: 92%;
   }
 }
