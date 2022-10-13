@@ -42,10 +42,10 @@ if (typeof createSubURL("bl") === "undefined") {
 }
 
 const adjustingPosition = () => {
-  wish.style.setProperty("--before_top", "-356px");
-  wish.style.setProperty("--before_left", "-346px");
-  wish.style.setProperty("--after_top", "-349px");
-  wish.style.setProperty("--after_right", "-469px");
+  wish.style.setProperty("--before_top", "-14.88rem");
+  wish.style.setProperty("--before_left", "-9.8rem");
+  wish.style.setProperty("--after_top", "-17.1rem");
+  wish.style.setProperty("--after_right", "-22.2rem");
 };
 
 const checkName = () => {
