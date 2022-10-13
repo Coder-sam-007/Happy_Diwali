@@ -48,7 +48,7 @@ const checkName = () => {
     nameBox.style.display = "block";
     msg.textContent =
       sname.value + " is wishing you the best of your fortune this Diwali :)";
-    adjustingPosition();
+  
   }
 };
 
