@@ -45,6 +45,7 @@ const checkName = () => {
   if (Name.length !== 0) {
     Name = Name.replace(/-/g, " ");
     yourName.textContent = Name;
+    nameBox.style.display = "block";
     msg.textContent =
       sname.value + " is wishing you the best of your fortune this Diwali :)";
     adjustingPosition();
